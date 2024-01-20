@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+:root {
+  --text-orange: #d37b10;
+  --text-yellow: #F1C40F; 
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.menu-toggle :checked + .nav-list{
+  display: none;
+  position: absolute;
+  right: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 100px;
+  margin-right: 20px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 100px;
+  z-index: 30;
+  margin-right: 20px;
+  flex-direction: column;
+}
+
+a {  
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--text-yellow);
+  font-size: 16px;
+}
+
+a:hover{
+  color:black
+}
+
+main {
+  background-image: "./assets/img/fondo.png";
+  background-size:auto;
+  background-repeat: repeat; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-info h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-orange);
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.hero-info-paragraph,
+  p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:var(--text-orange);
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+.hero-section h3 {
+  font-weight: 600;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-section {
+  display: flex;
+  gap: 50px;
+  max-width: 900px;
+  align-items: center;
+}
+
+section {
+  margin-top: 100px;
+}
+
+.discover-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.discover-img-container {
+  display: flex;
+  gap: 15px;
+}
+
+.img-container {
+  flex: 1;
+}
+
+.discover-img-container img {
+  width: 100%;
+  border-radius: 10%;
+}
+
+.footer-link,
+footer p {
+  color: var(--text-yellow);
+}
+
+.footer-link {
+  margin: 0 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+
+

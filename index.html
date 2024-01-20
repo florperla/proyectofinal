@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Pop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/logo.png"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/mediaqueries.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/animaciones.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/img/logo.png" alt="Art Pop" width="50" height="50"/>
+      <nav>  
+        <label for="menu-toggle" class="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </label>
+        
+        <input type="checkbox" id="menu-toggle"/>  
+          
+        <ul class="nav-list">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#discover">Ver Arte</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/sebacuri" target="_blank">Contactate</a>
+            </li>
+          </ul>
+      </nav> 
+    </header>
+    <main>
+      <section class="hero-section" id="home">
+        <div class="hero-info">
+          <h1>Conoce nuestro Arte</h1>
+          <p class="hero-info-paragraph">
+            Aquí podrás conocer las nuevas obras de arte de Seba Curi y mantenerte al día con 
+            el arte pop.
+          </p>
+        </div>
+      </section>
+
+      <section class="discover-section" id="discover">
+        <div class="discover-img-container">
+          <div class="img-container">
+            <img
+              src="./assets/img/discover/pintura1.jpg"
+              alt="Pintura1"
+            />
+          </div>
+          <div class="img-container">
+            <img src="./assets/img/discover/pintura2.jpg" alt="Pintura2" />
+          </div>
+          <div class="img-container">
+            <img src="./assets/img/discover/pintura3.jpg" alt="Pintura3" />
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        <div>
+          <a href="https://linktr.ee/sebacuri" class="footer-link">Contacto</a>
+        </div>
+        <p>Hecho por <b>MARIA FLORENCIA PERLA</b></p>
+      </footer>
+    </main>
+  </body>
+</html>

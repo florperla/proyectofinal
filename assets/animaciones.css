@@ -1,0 +1,123 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 73px;
+}
+
+.overlay {
+  position: absolute;
+  top: 73px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li a::after {
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.15s ease;
+}
+
+.nav-list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* Animación opacidad */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animación de abajo hacia arriba */
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Animación de derecha hacia izquierda */
+@keyframes slide-right {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  animation: fade 1s ease-in, slide-up 0.9s ease-in-out;
+}
+
+.hero-info-paragraph {
+  opacity: 0;
+  animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+  animation-delay: 0.3s;
+}
+
+.hero-link {
+  opacity: 0;
+  animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+    opacity: 0;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+h1 span::before,
+h1 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1 span::before {
+  background-color: var(--background);
+  animation: typewriter 1.2s 1.4s steps(6) forwards;
+}
+
+h1 span::after {
+  width: 0.1rem;
+  background: linear-gradient(to top, #30cfd0, #c43ad6);
+  animation: typewriter 1.2s 1.4s steps(6) forwards,
+    blink 0.8s steps(6) infinite;
+}
